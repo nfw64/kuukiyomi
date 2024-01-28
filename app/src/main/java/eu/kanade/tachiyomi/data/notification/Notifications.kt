@@ -69,6 +69,19 @@ object Notifications {
     const val ID_INCOGNITO_MODE = -701
 
     /**
+     * Notification channel and ids used for torrent server
+     */
+    const val CHANNEL_TORRENT_SERVER = "torrent_server_channel"
+    const val ID_TORRENT_SERVER = -801
+
+    // AM (DISCORD) -->
+    /**
+     * Notification channel used for Discord RPC
+     */
+    const val CHANNEL_DISCORD_RPC = "${RICH_PRESENCE_TAG}_channel"
+    const val ID_DISCORD_RPC = -1701
+    // <-- AM (DISCORD)
+    /**
      * Notification channel and ids used for app and extension updates.
      */
     private const val GROUP_APK_UPDATES = "group_apk_updates"
@@ -162,6 +175,15 @@ object Notifications {
                 buildNotificationChannel(CHANNEL_INCOGNITO_MODE, IMPORTANCE_LOW) {
                     setName(context.stringResource(MR.strings.pref_incognito_mode))
                 },
+                buildNotificationChannel(CHANNEL_TORRENT_SERVER, IMPORTANCE_LOW) {
+                    setName("Torrent server") // TODO: change this
+                    setShowBadge(false)
+                },
+                // AM (DISCORD) -->
+                buildNotificationChannel(CHANNEL_DISCORD_RPC, IMPORTANCE_LOW) {
+                    setName(context.getString(R.string.pref_discord_rpc))
+                },
+                // <-- AM (DISCORD)
                 buildNotificationChannel(CHANNEL_APP_UPDATE, IMPORTANCE_DEFAULT) {
                     setGroup(GROUP_APK_UPDATES)
                     setName(context.stringResource(MR.strings.channel_app_updates))
