@@ -276,7 +276,7 @@ dependencies {
     // true type parser
     implementation(libs.truetypeparser)
     // shell
-    implementation(com.github.topjohnwu.libsu:core:5.2.2)
+    implementation("com.github.topjohnwu.libsu:core:5.2.2")
     implementation(files("libs/server.aar"))
 }
 
