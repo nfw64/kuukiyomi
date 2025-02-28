@@ -49,7 +49,6 @@ import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
 import android.util.DisplayMetrics
 import android.util.Log
->>>>>>> d54417bc6 (feat(player): implement TorrServer client)
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
